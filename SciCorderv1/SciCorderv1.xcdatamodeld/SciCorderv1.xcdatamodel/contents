@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22F82" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="OneVariableExperiment" representedClassName="OneVariableExperiment" syncable="YES" codeGenerationType="class">
+        <attribute name="data" optional="YES" attributeType="Transformable" customClassName="[Double]"/>
+        <attribute name="meas" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="measName" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="unit" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Pair" representedClassName="Pair" syncable="YES" codeGenerationType="class">
+        <attribute name="x" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="y" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="PairDataset" representedClassName="PairDataset" syncable="YES" codeGenerationType="class">
+        <attribute name="dataset" optional="YES" attributeType="Transformable" customClassName="[Pair]"/>
+        <attribute name="expName" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="TwoVariableExperiment" representedClassName="TwoVariableExperiment" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="xData" optional="YES" attributeType="Transformable" customClassName="[Double]"/>
+        <attribute name="xMeas" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="xMeasName" optional="YES" attributeType="String"/>
+        <attribute name="xUnit" optional="YES" attributeType="String"/>
+        <attribute name="yData" optional="YES" attributeType="Transformable" customClassName="[Double]"/>
+        <attribute name="yMeas" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="yMeasName" optional="YES" attributeType="String"/>
+        <attribute name="yUnit" optional="YES" attributeType="String"/>
+    </entity>
+</model>
