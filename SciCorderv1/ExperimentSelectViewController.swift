@@ -12,6 +12,7 @@ class ExperimentSelectViewController: UITableViewController {
         tableView.dataSource = self
         tableView.delegate = self
         fetchExperiments()
+        var x = "fun"
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
