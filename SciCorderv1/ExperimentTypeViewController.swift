@@ -5,8 +5,13 @@ import UIKit
 class ExperimentTypeViewController: UIViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    @IBOutlet weak var createOneButton: UIButton!
+    @IBOutlet weak var createTwoButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        createOneButton.titleLabel?.font = UIFont.init(name: "BauhausStd-Medium", size: 18)
+        createTwoButton.titleLabel?.font = UIFont.init(name: "BauhausStd-Medium", size: 18)
 
         // Do any additional setup after loading the view.
     }

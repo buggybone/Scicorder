@@ -1,4 +1,5 @@
 import UIKit
+import SwiftUI
 
 class OneVariableTableViewController: UITableViewController {
     
@@ -10,6 +11,8 @@ class OneVariableTableViewController: UITableViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.reloadData()
+        self.tableView.backgroundColor = UIColor(Color("Blackish"))
+        
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -22,6 +25,9 @@ class OneVariableTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
+        cell.textLabel?.textColor = UIColor(Color("Gray"))
+        cell.backgroundColor = UIColor(Color("Blackish"))
+        cell.textLabel?.font = UIFont.init(name: "BauhausStd-Medium", size: 18)
         cell.textLabel?.text = String(format: "%.2f", exp?.data?[indexPath.row] ?? 0.0) + " " + (exp?.unit ?? "units")
         return cell
     }
@@ -30,6 +36,7 @@ class OneVariableTableViewController: UITableViewController {
         let alert = UIAlertController(title: "Data Selected", message: "Please type the updated value for the data and hit submit, or hit delete to remove the data.", preferredStyle: .alert)
         alert.addTextField { (textField) in
             textField.placeholder = String(format: "%.2f", self.exp?.data?[indexPath.row] ?? 0.0)
+            textField.keyboardType = UIKeyboardType.decimalPad
         }
         let updateIt = UIAlertAction(title: "Submit", style: .default){_ in
             self.exp?.data?[indexPath.row] = Double(alert.textFields?[0].text ?? "0.0") ?? 0.0
@@ -50,6 +57,15 @@ class OneVariableTableViewController: UITableViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    func offsetTapped(os: Double){
+        for i in 0...(exp!.data!.count - 1){
+            exp!.data![i] += os
+        }
+        try! self.context.save()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
     
 
 

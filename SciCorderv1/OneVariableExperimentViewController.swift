@@ -1,10 +1,3 @@
-//
-//  OneVariableExperimentViewController.swift
-//  SciCorderv1
-//
-//  Created by Isabelle Winnick on 8/15/23.
-//
-
 import UIKit
 import CoreMotion
 import Foundation
@@ -25,10 +18,21 @@ class OneVariableExperimentViewController: UIViewController {
     @IBOutlet weak var expNameLabel: UILabel!
     @IBOutlet weak var measTypeLabel: UILabel!
     @IBOutlet weak var measValLabel: UILabel!
-    
+    @IBOutlet weak var zeroButton: UIButton!
+    @IBOutlet weak var measureButton: UIButton!
+    @IBOutlet weak var exportButton: UIButton!
+    @IBOutlet weak var tableButton: UIButton!
+    @IBOutlet weak var graphButton: UIButton!
+    @IBOutlet weak var homeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        zeroButton.titleLabel?.font = UIFont.init(name: "BauhausStd-Medium", size: 18)
+        measureButton.titleLabel?.font = UIFont.init(name: "BauhausStd-Medium", size: 18)
+        exportButton.titleLabel?.font = UIFont.init(name: "BauhausStd-Medium", size: 18)
+        tableButton.titleLabel?.font = UIFont.init(name: "BauhausStd-Medium", size: 18)
+        graphButton.titleLabel?.font = UIFont.init(name: "BauhausStd-Medium", size: 18)
+        homeButton.titleLabel?.font = UIFont.init(name: "BauhausStd-Medium", size: 18)
         
         expNameLabel.text = exp!.name ?? "Default"
         unit = exp!.unit ?? "Default"
@@ -36,7 +40,10 @@ class OneVariableExperimentViewController: UIViewController {
         measValLabel.text = "--  " + unit
         measTypeLabel.text = exp!.measName ?? "Default"
         
-        
+        if(meas == 0){
+            zeroButton.isHidden = true
+            zeroButton.isEnabled = false
+        }
         if (meas == 1 || meas == 2 || meas == 3 || meas == 4) && self.motion.isAccelerometerAvailable{
             self.motion.accelerometerUpdateInterval = 1.0 / 10.0
             self.motion.startAccelerometerUpdates()
@@ -61,6 +68,7 @@ class OneVariableExperimentViewController: UIViewController {
             let alert = UIAlertController(title: "Manual Entry Measurement", message: "Please type the value that was measured.", preferredStyle: .alert)
             alert.addTextField { (textField) in
                 textField.placeholder = "Measurement Value"
+                textField.keyboardType = UIKeyboardType.decimalPad
             }
             let theAction = UIAlertAction(title: "Proceed", style: .default){(action) in
                 let value = Double(alert.textFields![0].text ?? "0.0")
@@ -79,7 +87,8 @@ class OneVariableExperimentViewController: UIViewController {
     }
     
     @IBAction func tableTapped(_ sender: Any) {
-        performSegue(withIdentifier: "toTableView", sender: exp)
+        //performSegue(withIdentifier: "toTableView", sender: exp)
+        performSegue(withIdentifier: "toAlternate", sender: exp)
     }
     
     @IBAction func graphTapped(_ sender: Any) {
@@ -137,14 +146,51 @@ class OneVariableExperimentViewController: UIViewController {
                     return 0.0
                 }
             }
-        } else if (measIndex == 9) {
+        }
+        if (measIndex == 9) {
             return press
         }
+        /*if (measIndex == 10){
+            let currentTime = NSDate().timeIntervalSince1970
+            return currentTime
+        }*/
         return 0.0
     }
     
+    @IBAction func exportTapped(_ sender: Any) {
+        let filename = "hey.csv"
+        let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(filename)
+        
+        var csvhead = (exp?.measName ?? "x") + "(" + (exp?.unit ?? "units") + ")\n"
+        
+      
+        for (i, _) in exp!.data!.enumerated(){
+            csvhead.append("\(exp!.data![i])\n")
+        }
+   
+        
+        do{
+            try csvhead.write(to: path!, atomically: true, encoding: .utf8)
+            let activityController = UIActivityViewController(activityItems: [path as Any], applicationActivities: nil)
+            self.present(activityController, animated: true, completion: nil)
+        }catch{
+            print("fail")
+        }
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? OneVariableTableViewController{
+            if let exp = sender as? OneVariableExperiment{
+                dest.exp = exp
+            }
+        }
+        if let dest = segue.destination as? OneVariableGraphViewController{
+            if let exp = sender as? OneVariableExperiment{
+                dest.exp = exp
+            }
+        }
+        if let dest = segue.destination as? OneVarButtonTableViewController{
             if let exp = sender as? OneVariableExperiment{
                 dest.exp = exp
             }

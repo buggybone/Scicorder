@@ -1,17 +1,19 @@
 
 import UIKit
+import SwiftUI
 
 class TwoVariableTableViewController: UITableViewController {
 
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var exp: TwoVariableExperiment? = nil
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         tableView.reloadData()
-        print(exp?.xData ?? "uh oh")
+        self.tableView.backgroundColor = UIColor(Color("Blackish"))
         
     }
 
@@ -25,8 +27,12 @@ class TwoVariableTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let offset = exp?.xMeas == 10 ? (exp?.xData?[0] ?? 0.0) : 0.0
         let cell = UITableViewCell()
-        cell.textLabel?.text = "(" + String(format: "%.2f", exp?.xData?[indexPath.row] ?? 0.0) +  " " + (exp?.xUnit ?? "units") + ", " +  String(format: "%.2f", exp?.yData?[indexPath.row] ?? 0.0) + " " + (exp?.yUnit ?? "units") + ")"
+        cell.textLabel?.textColor = UIColor(Color("Gray"))
+        cell.backgroundColor = UIColor(Color("Blackish"))
+        cell.textLabel?.font = UIFont.init(name: "BauhausStd-Medium", size: 18)
+        cell.textLabel?.text = "(" + String(format: "%.2f", (exp?.xData?[indexPath.row] ?? 0.0) - offset) +  " " + (exp?.xUnit ?? "units") + ", " +  String(format: "%.2f", exp?.yData?[indexPath.row] ?? 0.0) + " " + (exp?.yUnit ?? "units") + ")"
         return cell
     }
     
@@ -34,9 +40,11 @@ class TwoVariableTableViewController: UITableViewController {
         let alert = UIAlertController(title: "Data Selected", message: "Please type the updated value for the data and hit submit, or hit delete to remove the data.", preferredStyle: .alert)
         alert.addTextField { (textField) in
             textField.placeholder = String(format: "%.2f", self.exp?.xData?[indexPath.row] ?? 0.0)
+            textField.keyboardType = UIKeyboardType.decimalPad
         }
         alert.addTextField { (textField) in
             textField.placeholder = String(format: "%.2f", self.exp?.yData?[indexPath.row] ?? 0.0)
+            textField.keyboardType = UIKeyboardType.decimalPad
         }
         let updateIt = UIAlertAction(title: "Submit", style: .default){_ in
             self.exp?.xData?[indexPath.row] = Double(alert.textFields?[0].text ?? "0.0") ?? 0.0
@@ -59,14 +67,24 @@ class TwoVariableTableViewController: UITableViewController {
         present(alert, animated: true, completion: nil)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func xOffsetTapped(os: Double){
+        for i in 0...(exp!.xData!.count - 1){
+            exp!.xData![i] += os
+        }
+        try! self.context.save()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
-    */
+    
+    func yOffsetTapped(os: Double){
+        for i in 0...(exp!.yData!.count - 1){
+            exp!.yData![i] += os
+        }
+        try! self.context.save()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
 
 }

@@ -3,62 +3,112 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="BauhausStd-Medium.ttf">
+            <string>BauhausStd-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--WelcomeView-->
         <scene sceneID="hQq-L4-kVW">
             <objects>
-                <viewController title="WelcomeView" id="owq-vI-Su7" customClass="WelcomeViewController" customModule="SciCorderv1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="WelcomeView" id="owq-vI-Su7" customClass="WelcomeViewController" customModule="SciCorder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nEV-rP-YG1">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOGO HERE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvy-jR-hqE">
-                                <rect key="frame" x="150" y="221" width="93" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07t-yH-uim">
-                                <rect key="frame" x="88" y="384" width="217" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="He2-Rp-O9L">
+                                <rect key="frame" x="10" y="645" width="373" height="38"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Create a New Experiment"/>
-                                <connections>
-                                    <action selector="newExperimentTapped:" destination="hoe-PA-nNK" eventType="touchUpInside" id="oQI-Tv-v5y"/>
-                                    <action selector="newExperimentTapped:" destination="owq-vI-Su7" eventType="touchUpInside" id="uEG-hL-EBK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="He2-Rp-O9L">
-                                <rect key="frame" x="94" y="495" width="206" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Continue an Experiment"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Continue an Experiment">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="BauhausStd-Medium"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="continueExperimentTapped:" destination="hoe-PA-nNK" eventType="touchUpInside" id="VWa-MP-mhB"/>
                                     <action selector="continueExperimentTapped:" destination="owq-vI-Su7" eventType="touchUpInside" id="mty-8e-eLa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBM-j8-YTy">
-                                <rect key="frame" x="103" y="609" width="187" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBM-j8-YTy">
+                                <rect key="frame" x="10" y="723" width="373" height="38"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Delete an Experiment"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Delete an Experiment">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="BauhausStd-Medium"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="deleteExperimentTapped:" destination="hoe-PA-nNK" eventType="touchUpInside" id="Pma-b3-dlG"/>
                                     <action selector="deleteExperimentTapped:" destination="owq-vI-Su7" eventType="touchUpInside" id="biL-D2-RLQ"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="f48-7h-UHT">
+                                <rect key="frame" x="10" y="113" width="373" height="444"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07t-yH-uim">
+                                <rect key="frame" x="10" y="567" width="373" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Create a New Experiment">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="24" name="BauhausStd-Medium"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="newExperimentTapped:" destination="hoe-PA-nNK" eventType="touchUpInside" id="oQI-Tv-v5y"/>
+                                    <action selector="newExperimentTapped:" destination="owq-vI-Su7" eventType="touchUpInside" id="uEG-hL-EBK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MYh-iI-tID"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Blackish"/>
+                        <constraints>
+                            <constraint firstItem="MYh-iI-tID" firstAttribute="trailing" secondItem="07t-yH-uim" secondAttribute="trailing" constant="10" id="4vL-va-i8M"/>
+                            <constraint firstItem="07t-yH-uim" firstAttribute="top" secondItem="f48-7h-UHT" secondAttribute="bottom" constant="10" id="58H-Gp-bB0"/>
+                            <constraint firstItem="RBM-j8-YTy" firstAttribute="top" secondItem="He2-Rp-O9L" secondAttribute="bottom" constant="40" id="F5z-hi-DYb"/>
+                            <constraint firstItem="MYh-iI-tID" firstAttribute="trailing" secondItem="He2-Rp-O9L" secondAttribute="trailing" constant="10" id="LEc-P1-1JH"/>
+                            <constraint firstItem="f48-7h-UHT" firstAttribute="top" secondItem="MYh-iI-tID" secondAttribute="top" constant="10" id="Mm8-4a-DbE"/>
+                            <constraint firstItem="MYh-iI-tID" firstAttribute="trailing" secondItem="f48-7h-UHT" secondAttribute="trailing" constant="10" id="UAT-9s-oJU"/>
+                            <constraint firstItem="MYh-iI-tID" firstAttribute="trailing" secondItem="RBM-j8-YTy" secondAttribute="trailing" constant="10" id="VcM-fs-Z9a"/>
+                            <constraint firstItem="07t-yH-uim" firstAttribute="leading" secondItem="MYh-iI-tID" secondAttribute="leading" constant="10" id="c02-XY-CSQ"/>
+                            <constraint firstItem="He2-Rp-O9L" firstAttribute="top" secondItem="07t-yH-uim" secondAttribute="bottom" constant="40" id="cPW-8i-nB4"/>
+                            <constraint firstItem="RBM-j8-YTy" firstAttribute="leading" secondItem="MYh-iI-tID" secondAttribute="leading" constant="10" id="hPc-Of-WVB"/>
+                            <constraint firstItem="He2-Rp-O9L" firstAttribute="leading" secondItem="MYh-iI-tID" secondAttribute="leading" constant="10" id="u2y-Yw-uIa"/>
+                            <constraint firstItem="f48-7h-UHT" firstAttribute="leading" secondItem="MYh-iI-tID" secondAttribute="leading" constant="10" id="vUL-Hz-QyL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PEU-tG-YAk"/>
                     <connections>
+                        <outlet property="continueButton" destination="He2-Rp-O9L" id="SKZ-N0-5Nr"/>
+                        <outlet property="deleteButton" destination="RBM-j8-YTy" id="WFl-jd-E4N"/>
+                        <outlet property="newButton" destination="07t-yH-uim" id="FvB-kz-kEW"/>
                         <segue destination="76c-TM-dbU" kind="show" identifier="toExperimentSelectView" id="jaH-q9-hQ4"/>
                         <segue destination="m60-rM-Dtb" kind="show" identifier="toExperimentTypeView" id="MCX-zH-cGo"/>
                     </connections>
@@ -66,36 +116,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qW5-w6-hnG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="hoe-PA-nNK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-480" y="-183"/>
+            <point key="canvasLocation" x="-480.15267175572518" y="-183.09859154929578"/>
         </scene>
         <!--OneVariableSelectView-->
         <scene sceneID="mr8-Et-G0S">
             <objects>
-                <viewController title="OneVariableSelectView" id="RHu-8Y-i4n" customClass="OneVariableSelectViewController" customModule="SciCorderv1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="OneVariableSelectView" id="RHu-8Y-i4n" customClass="OneVariableSelectViewController" customModule="SciCorder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0dS-E0-BQS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One Variable Select View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQa-Tg-9Vh">
-                                <rect key="frame" x="10" y="113" width="373" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="10" y="113" width="373" height="24"/>
+                                <fontDescription key="fontDescription" name="BauhausStd-Medium" family="Bauhaus Std" pointSize="24"/>
+                                <color key="textColor" name="Gray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCr-n2-0mR">
-                                <rect key="frame" x="10" y="450" width="373" height="35"/>
+                                <rect key="frame" x="10" y="453" width="373" height="38"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Proceed"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Proceed">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="BauhausStd-Medium"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="proceedTapped:" destination="RHu-8Y-i4n" eventType="touchUpInside" id="c5T-CG-KDp"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQu-tp-rnw">
-                                <rect key="frame" x="10" y="184" width="373" height="216"/>
+                                <rect key="frame" x="10" y="187" width="373" height="216"/>
                             </pickerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="oJa-Fp-Z6X">
+                                <rect key="frame" x="52" y="499" width="288" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MDf-va-u9L"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Blackish"/>
                         <constraints>
                             <constraint firstItem="MDf-va-u9L" firstAttribute="trailing" secondItem="NQa-Tg-9Vh" secondAttribute="trailing" constant="10" id="1fe-oh-OHP"/>
                             <constraint firstItem="fCr-n2-0mR" firstAttribute="top" secondItem="XQu-tp-rnw" secondAttribute="bottom" constant="50" id="B9Y-iZ-Ajf"/>
@@ -112,12 +177,13 @@
                     <connections>
                         <outlet property="expNameLabel" destination="NQa-Tg-9Vh" id="T0c-1x-XQI"/>
                         <outlet property="picker" destination="XQu-tp-rnw" id="N55-16-6pA"/>
+                        <outlet property="proceedButton" destination="fCr-n2-0mR" id="5BV-8r-6Sl"/>
                         <segue destination="u8F-56-XS6" kind="show" identifier="toOneVariableExperimentView" id="bOj-m2-1Zw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U54-RA-zLY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2053" y="-1394"/>
+            <point key="canvasLocation" x="2052.6717557251909" y="-1394.3661971830986"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="v1q-Mm-A4j">
@@ -139,11 +205,13 @@
         <!--ExperimentSelectView-->
         <scene sceneID="NgL-Hh-T6h">
             <objects>
-                <tableViewController title="ExperimentSelectView" id="76c-TM-dbU" customClass="ExperimentSelectViewController" customModule="SciCorderv1" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="ExperimentSelectView" id="76c-TM-dbU" customClass="ExperimentSelectViewController" customModule="SciCorder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Isj-jo-MrE">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="sectionIndexColor" name="Gray"/>
+                        <color key="sectionIndexBackgroundColor" name="Blackish"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IJC-x0-g8g">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
@@ -172,266 +240,550 @@
         <!--TwoVariableExperimentView-->
         <scene sceneID="oHi-DN-1Ce">
             <objects>
-                <viewController title="TwoVariableExperimentView" id="7qQ-5T-g0a" customClass="TwoVariableExperimentViewController" customModule="SciCorderv1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="TwoVariableExperimentView" id="7qQ-5T-g0a" customClass="TwoVariableExperimentViewController" customModule="SciCorder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MVd-jt-eYn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQq-KV-jS8">
-                                <rect key="frame" x="10" y="249" width="373" height="35"/>
+                                <rect key="frame" x="10" y="237" width="373" height="32"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Zero X Measurement"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Zero X Measurement">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="BauhausStd-Medium"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="zeroXTapped:" destination="7qQ-5T-g0a" eventType="touchUpInside" id="72X-BL-Ccf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5y-y2-YJ6">
-                                <rect key="frame" x="10" y="531" width="373" height="35"/>
+                                <rect key="frame" x="10" y="445" width="373" height="32"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Measure"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Measure">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="BauhausStd-Medium"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="measureTapped:" destination="7qQ-5T-g0a" eventType="touchUpInside" id="80c-1o-Gca"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLN-nJ-407">
-                                <rect key="frame" x="10" y="426" width="373" height="35"/>
+                                <rect key="frame" x="10" y="393" width="373" height="32"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Zero Y Measurement"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Zero Y Measurement">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="BauhausStd-Medium"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="zeroYTapped:" destination="7qQ-5T-g0a" eventType="touchUpInside" id="SnR-B0-Sqo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2XW-Nj-Zsf">
-                                <rect key="frame" x="10" y="616" width="373" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2XW-Nj-Zsf">
+                                <rect key="frame" x="10" y="714" width="177" height="32"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Go To Table View"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Table View">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="18" name="BauhausStd-Medium"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="tableTapped:" destination="7qQ-5T-g0a" eventType="touchUpInside" id="pY2-KU-WgI"/>
                                     <action selector="tableTapped:" destination="0On-zr-DJN" eventType="touchUpInside" id="qYQ-YV-fOE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1L-Mk-Zor">
-                                <rect key="frame" x="10" y="671" width="373" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1L-Mk-Zor">
+                                <rect key="frame" x="216" y="714" width="167" height="32"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Go To Graph View"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Graph View">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="BauhausStd-Medium"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="graphTapped:" destination="7qQ-5T-g0a" eventType="touchUpInside" id="Q2E-2e-GD1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-- X UNITS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIe-zj-P5I">
-                                <rect key="frame" x="10" y="198" width="373" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="10" y="190" width="373" height="17"/>
+                                <fontDescription key="fontDescription" name="BauhausStd-Medium" family="Bauhaus Std" pointSize="17"/>
+                                <color key="textColor" name="Gray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X MEASUREMENT TYPE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsi-Tu-TW3">
-                                <rect key="frame" x="10" y="157" width="373" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="10" y="153" width="373" height="17"/>
+                                <fontDescription key="fontDescription" name="BauhausStd-Medium" family="Bauhaus Std" pointSize="17"/>
+                                <color key="textColor" name="Gray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-- Y UNITS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhY-jl-Y9q">
-                                <rect key="frame" x="10" y="375" width="373" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="10" y="346" width="373" height="17"/>
+                                <fontDescription key="fontDescription" name="BauhausStd-Medium" family="Bauhaus Std" pointSize="17"/>
+                                <color key="textColor" name="Gray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y MEASUREMENT TYPE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZu-hi-Ngw">
-                                <rect key="frame" x="10" y="334" width="373" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="10" y="309" width="373" height="17"/>
+                                <fontDescription key="fontDescription" name="BauhausStd-Medium" family="Bauhaus Std" pointSize="17"/>
+                                <color key="textColor" name="Gray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUI-K4-QpO">
-                                <rect key="frame" x="10" y="756" width="373" height="35"/>
+                                <rect key="frame" x="10" y="766" width="373" height="32"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Go Home"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Go Home">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="BauhausStd-Medium"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="homeTapped:" destination="u8F-56-XS6" eventType="touchUpInside" id="2ue-0b-h4X"/>
                                     <action selector="homeTapped:" destination="7qQ-5T-g0a" eventType="touchUpInside" id="BPX-ng-obb"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lY2-Kk-eeR">
-                                <rect key="frame" x="10" y="113" width="373" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="10" y="113" width="373" height="20"/>
+                                <fontDescription key="fontDescription" name="BauhausStd-Medium" family="Bauhaus Std" pointSize="20"/>
+                                <color key="textColor" name="Gray"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAr-DC-d8d">
+                                <rect key="frame" x="10" y="662" width="373" height="32"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Export Data">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="BauhausStd-Medium"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="exportTapped:" destination="7qQ-5T-g0a" eventType="touchUpInside" id="cKn-96-mDp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HjT-PS-r3Z">
+                                <rect key="frame" x="10" y="610" width="373" height="32"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Fi">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="18" name="BauhausStd-Medium"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="t">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="fitTapped:" destination="7qQ-5T-g0a" eventType="touchUpInside" id="Y5f-UT-tZ4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtB-Rg-tuB">
+                                <rect key="frame" x="10" y="497" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Burst Measurement">
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="burstTapped:" destination="7qQ-5T-g0a" eventType="touchUpInside" id="Y97-5r-8sw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iD7-MU-5ou"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Blackish"/>
                         <constraints>
                             <constraint firstItem="lY2-Kk-eeR" firstAttribute="top" secondItem="iD7-MU-5ou" secondAttribute="top" constant="10" id="1bN-SG-Apd"/>
-                            <constraint firstItem="g1L-Mk-Zor" firstAttribute="leading" secondItem="iD7-MU-5ou" secondAttribute="leading" constant="10" id="4Vo-Cc-F03"/>
+                            <constraint firstItem="iD7-MU-5ou" firstAttribute="trailing" secondItem="rAr-DC-d8d" secondAttribute="trailing" constant="10" id="1v1-NL-6S2"/>
+                            <constraint firstItem="HjT-PS-r3Z" firstAttribute="leading" secondItem="iD7-MU-5ou" secondAttribute="leading" constant="10" id="2cY-q3-Q6v"/>
                             <constraint firstItem="iD7-MU-5ou" firstAttribute="trailing" secondItem="lY2-Kk-eeR" secondAttribute="trailing" constant="10" id="4tf-be-IEV"/>
                             <constraint firstItem="iUI-K4-QpO" firstAttribute="leading" secondItem="iD7-MU-5ou" secondAttribute="leading" constant="10" id="5IV-w6-6ZP"/>
+                            <constraint firstItem="iUI-K4-QpO" firstAttribute="top" secondItem="2XW-Nj-Zsf" secondAttribute="bottom" constant="20" id="6jt-VN-Zhs"/>
+                            <constraint firstItem="iUI-K4-QpO" firstAttribute="top" secondItem="g1L-Mk-Zor" secondAttribute="bottom" constant="20" id="7nu-zN-Uoo"/>
+                            <constraint firstItem="g1L-Mk-Zor" firstAttribute="leading" secondItem="2XW-Nj-Zsf" secondAttribute="trailing" constant="20" id="8Yw-yl-ym8"/>
                             <constraint firstItem="iD7-MU-5ou" firstAttribute="trailing" secondItem="f5y-y2-YJ6" secondAttribute="trailing" constant="10" id="8x4-Iq-6Rj"/>
+                            <constraint firstItem="rAr-DC-d8d" firstAttribute="leading" secondItem="iD7-MU-5ou" secondAttribute="leading" constant="10" id="FXA-En-6bz"/>
                             <constraint firstItem="iD7-MU-5ou" firstAttribute="trailing" secondItem="bhY-jl-Y9q" secondAttribute="trailing" constant="10" id="HCr-2t-lch"/>
+                            <constraint firstItem="iD7-MU-5ou" firstAttribute="trailing" secondItem="HjT-PS-r3Z" secondAttribute="trailing" constant="10" id="HZe-LL-OeU"/>
                             <constraint firstItem="DZu-hi-Ngw" firstAttribute="leading" secondItem="iD7-MU-5ou" secondAttribute="leading" constant="10" id="IyU-oi-Hel"/>
                             <constraint firstItem="bhY-jl-Y9q" firstAttribute="top" secondItem="DZu-hi-Ngw" secondAttribute="bottom" constant="20" id="JBR-c1-UZH"/>
                             <constraint firstItem="lY2-Kk-eeR" firstAttribute="leading" secondItem="iD7-MU-5ou" secondAttribute="leading" constant="10" id="JJG-St-CRz"/>
-                            <constraint firstItem="DZu-hi-Ngw" firstAttribute="top" secondItem="bQq-KV-jS8" secondAttribute="bottom" constant="50" id="KFM-xq-z3f"/>
+                            <constraint firstItem="DZu-hi-Ngw" firstAttribute="top" secondItem="bQq-KV-jS8" secondAttribute="bottom" constant="40" id="KFM-xq-z3f"/>
                             <constraint firstItem="gIe-zj-P5I" firstAttribute="leading" secondItem="iD7-MU-5ou" secondAttribute="leading" constant="10" id="KwK-7i-SZx"/>
-                            <constraint firstItem="g1L-Mk-Zor" firstAttribute="top" secondItem="2XW-Nj-Zsf" secondAttribute="bottom" constant="20" id="Pb0-kJ-1ce"/>
                             <constraint firstItem="iD7-MU-5ou" firstAttribute="trailing" secondItem="gIe-zj-P5I" secondAttribute="trailing" constant="10" id="R3z-Zw-cuM"/>
-                            <constraint firstItem="f5y-y2-YJ6" firstAttribute="top" secondItem="LLN-nJ-407" secondAttribute="bottom" constant="70" id="Sfv-bx-rut"/>
-                            <constraint firstItem="iD7-MU-5ou" firstAttribute="trailing" secondItem="2XW-Nj-Zsf" secondAttribute="trailing" constant="10" id="VhJ-A0-IxL"/>
+                            <constraint firstItem="2XW-Nj-Zsf" firstAttribute="top" secondItem="rAr-DC-d8d" secondAttribute="bottom" constant="20" id="RKK-AE-wuZ"/>
+                            <constraint firstItem="VtB-Rg-tuB" firstAttribute="leading" secondItem="iD7-MU-5ou" secondAttribute="leading" constant="10" id="TXq-5c-AJa"/>
+                            <constraint firstItem="f5y-y2-YJ6" firstAttribute="top" secondItem="LLN-nJ-407" secondAttribute="bottom" constant="20" id="W8G-A5-b0S"/>
                             <constraint firstItem="2XW-Nj-Zsf" firstAttribute="leading" secondItem="iD7-MU-5ou" secondAttribute="leading" constant="10" id="Wo6-aj-CnE"/>
                             <constraint firstItem="bQq-KV-jS8" firstAttribute="leading" secondItem="iD7-MU-5ou" secondAttribute="leading" constant="10" id="YUn-pR-LWe"/>
                             <constraint firstItem="bQq-KV-jS8" firstAttribute="top" secondItem="gIe-zj-P5I" secondAttribute="bottom" constant="30" id="c1d-9T-DZc"/>
                             <constraint firstItem="iD7-MU-5ou" firstAttribute="trailing" secondItem="g1L-Mk-Zor" secondAttribute="trailing" constant="10" id="eoF-dH-Mpw"/>
-                            <constraint firstItem="2XW-Nj-Zsf" firstAttribute="top" secondItem="f5y-y2-YJ6" secondAttribute="bottom" constant="50" id="etg-rw-e2k"/>
                             <constraint firstItem="iD7-MU-5ou" firstAttribute="trailing" secondItem="bQq-KV-jS8" secondAttribute="trailing" constant="10" id="fcL-LI-WOj"/>
+                            <constraint firstItem="VtB-Rg-tuB" firstAttribute="top" secondItem="f5y-y2-YJ6" secondAttribute="bottom" constant="20" id="hPI-LX-9ov"/>
                             <constraint firstItem="bhY-jl-Y9q" firstAttribute="leading" secondItem="iD7-MU-5ou" secondAttribute="leading" constant="10" id="hWw-DK-Kio"/>
+                            <constraint firstItem="2XW-Nj-Zsf" firstAttribute="width" secondItem="g1L-Mk-Zor" secondAttribute="width" multiplier="0.994012" id="hX5-4I-b2y"/>
                             <constraint firstItem="gIe-zj-P5I" firstAttribute="top" secondItem="gsi-Tu-TW3" secondAttribute="bottom" constant="20" id="ipU-Q4-OpQ"/>
                             <constraint firstItem="gsi-Tu-TW3" firstAttribute="top" secondItem="lY2-Kk-eeR" secondAttribute="bottom" constant="20" id="jv3-sy-fQb"/>
                             <constraint firstItem="f5y-y2-YJ6" firstAttribute="leading" secondItem="iD7-MU-5ou" secondAttribute="leading" constant="10" id="p4O-88-ng6"/>
                             <constraint firstItem="LLN-nJ-407" firstAttribute="leading" secondItem="iD7-MU-5ou" secondAttribute="leading" constant="10" id="p7h-2d-wpD"/>
                             <constraint firstItem="iD7-MU-5ou" firstAttribute="trailing" secondItem="DZu-hi-Ngw" secondAttribute="trailing" constant="10" id="r2F-qi-acy"/>
                             <constraint firstItem="iD7-MU-5ou" firstAttribute="trailing" secondItem="LLN-nJ-407" secondAttribute="trailing" constant="10" id="rzK-5V-6OY"/>
+                            <constraint firstItem="rAr-DC-d8d" firstAttribute="top" secondItem="HjT-PS-r3Z" secondAttribute="bottom" constant="20" id="sbB-cD-QlN"/>
                             <constraint firstItem="iD7-MU-5ou" firstAttribute="trailing" secondItem="gsi-Tu-TW3" secondAttribute="trailing" constant="10" id="uNC-0y-eUL"/>
                             <constraint firstItem="iD7-MU-5ou" firstAttribute="trailing" secondItem="iUI-K4-QpO" secondAttribute="trailing" constant="10" id="vD1-YC-gzb"/>
-                            <constraint firstItem="iUI-K4-QpO" firstAttribute="top" secondItem="g1L-Mk-Zor" secondAttribute="bottom" constant="50" id="vyc-3P-X9Q"/>
+                            <constraint firstItem="iD7-MU-5ou" firstAttribute="trailing" secondItem="VtB-Rg-tuB" secondAttribute="trailing" constant="10" id="wJn-R7-MYy"/>
                             <constraint firstItem="LLN-nJ-407" firstAttribute="top" secondItem="bhY-jl-Y9q" secondAttribute="bottom" constant="30" id="xF2-TD-KLe"/>
                             <constraint firstItem="gsi-Tu-TW3" firstAttribute="leading" secondItem="iD7-MU-5ou" secondAttribute="leading" constant="10" id="xJU-Ks-yWe"/>
+                            <constraint firstItem="iD7-MU-5ou" firstAttribute="bottom" secondItem="iUI-K4-QpO" secondAttribute="bottom" constant="20" id="xN1-4k-eZg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Oip-ex-3yP"/>
                     <connections>
+                        <outlet property="burstButton" destination="VtB-Rg-tuB" id="u91-I2-1hc"/>
                         <outlet property="expNameLabel" destination="lY2-Kk-eeR" id="mbZ-kZ-Sm5"/>
+                        <outlet property="exportButton" destination="rAr-DC-d8d" id="gHb-ja-lCH"/>
+                        <outlet property="fitButton" destination="HjT-PS-r3Z" id="OFd-Ah-IV2"/>
+                        <outlet property="graphButton" destination="g1L-Mk-Zor" id="Kye-Sd-fIA"/>
+                        <outlet property="homeButton" destination="iUI-K4-QpO" id="xXG-fj-fQY"/>
+                        <outlet property="measureButton" destination="f5y-y2-YJ6" id="z7A-oZ-3t4"/>
+                        <outlet property="tableButton" destination="2XW-Nj-Zsf" id="jKF-VJ-R9K"/>
                         <outlet property="xMeasTypeLabel" destination="gsi-Tu-TW3" id="Lhc-ui-K6r"/>
                         <outlet property="xMeasValLabel" destination="gIe-zj-P5I" id="d5J-XT-ZPZ"/>
                         <outlet property="yMeasTypeLabel" destination="DZu-hi-Ngw" id="PwQ-Lh-m7j"/>
                         <outlet property="yMeasValLabel" destination="bhY-jl-Y9q" id="wfe-Wc-tcF"/>
+                        <outlet property="zeroXButton" destination="bQq-KV-jS8" id="4qY-0A-97g"/>
+                        <outlet property="zeroYButton" destination="LLN-nJ-407" id="JmP-IV-HUk"/>
                         <segue destination="Ptw-6E-mwf" kind="show" identifier="toGraphView" id="OxJ-fu-uY5"/>
-                        <segue destination="frv-oj-bLZ" kind="show" identifier="toTableView" id="PCY-ld-He5"/>
+                        <segue destination="cXb-LZ-K5F" kind="show" identifier="toFitView" id="9Jd-Xq-ROW"/>
+                        <segue destination="Nau-1B-cMn" kind="show" identifier="toTableView" id="CKy-Gw-a8b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTX-X1-3Bt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="0On-zr-DJN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3653" y="368"/>
+            <point key="canvasLocation" x="3652.6717557251909" y="420.42253521126764"/>
+        </scene>
+        <!--TwoVariableTableView-->
+        <scene sceneID="dqd-r0-wf5">
+            <objects>
+                <viewController title="TwoVariableTableView" id="Nau-1B-cMn" customClass="TwoVarButtonTableViewController" customModule="SciCorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sJJ-O1-xZa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWg-dZ-sQx">
+                                <rect key="frame" x="10" y="773" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add a Vertical Offset">
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="yOffsetTapped:" destination="Nau-1B-cMn" eventType="touchUpInside" id="Rov-XD-VVD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0A-SC-BVc">
+                                <rect key="frame" x="10" y="718" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add a Horizontal Offset">
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="xOffsetButton:" destination="cUn-OP-fEC" eventType="touchUpInside" id="3D1-Ik-ew3"/>
+                                    <action selector="xOffsetTapped:" destination="Nau-1B-cMn" eventType="touchUpInside" id="Dmh-wc-D7I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hBc-mJ-sm7"/>
+                        <color key="backgroundColor" name="Blackish"/>
+                        <constraints>
+                            <constraint firstItem="A0A-SC-BVc" firstAttribute="leading" secondItem="hBc-mJ-sm7" secondAttribute="leading" constant="10" id="JQf-9y-On0"/>
+                            <constraint firstItem="hBc-mJ-sm7" firstAttribute="bottom" secondItem="bWg-dZ-sQx" secondAttribute="bottom" constant="10" id="NdG-e2-Uqp"/>
+                            <constraint firstItem="bWg-dZ-sQx" firstAttribute="leading" secondItem="hBc-mJ-sm7" secondAttribute="leading" constant="10" id="VQg-2r-B5i"/>
+                            <constraint firstItem="hBc-mJ-sm7" firstAttribute="trailing" secondItem="A0A-SC-BVc" secondAttribute="trailing" constant="10" id="baO-SY-99w"/>
+                            <constraint firstItem="bWg-dZ-sQx" firstAttribute="top" secondItem="A0A-SC-BVc" secondAttribute="bottom" constant="20" id="qzI-I8-lPs"/>
+                            <constraint firstItem="hBc-mJ-sm7" firstAttribute="trailing" secondItem="bWg-dZ-sQx" secondAttribute="trailing" constant="10" id="yxw-pN-dKD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bNp-6I-jLz"/>
+                    <connections>
+                        <outlet property="xOffsetButton" destination="A0A-SC-BVc" id="RYn-f4-czw"/>
+                        <outlet property="yOffsetButton" destination="bWg-dZ-sQx" id="AGq-Ia-xvR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tdk-CC-SaH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="cUn-OP-fEC" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="5189" y="1188"/>
         </scene>
         <!--OneVariableExperimentView-->
         <scene sceneID="HVG-VD-UWS">
             <objects>
-                <viewController title="OneVariableExperimentView" id="u8F-56-XS6" customClass="OneVariableExperimentViewController" customModule="SciCorderv1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="OneVariableExperimentView" id="u8F-56-XS6" customClass="OneVariableExperimentViewController" customModule="SciCorder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1bq-s9-2D5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaZ-9L-33c">
-                                <rect key="frame" x="10" y="364" width="373" height="35"/>
+                                <rect key="frame" x="10" y="309" width="373" height="32"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Measure"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Measure">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="BauhausStd-Medium"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="measureTapped:" destination="u8F-56-XS6" eventType="touchUpInside" id="iSm-RQ-4zH"/>
                                     <action selector="takeMeasurement:" destination="Y1b-Sw-qrY" eventType="touchUpInside" id="Fty-CL-LVV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9U-Ax-hqq">
-                                <rect key="frame" x="10" y="449" width="373" height="35"/>
+                                <rect key="frame" x="10" y="652" width="373" height="32"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Go To Table View"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Go To Table View">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="BauhausStd-Medium"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="tableTapped:" destination="u8F-56-XS6" eventType="touchUpInside" id="5Pb-Vn-EU7"/>
                                     <action selector="tableTapped:" destination="Y1b-Sw-qrY" eventType="touchUpInside" id="rV3-7P-KD3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbb-Tw-iMs">
-                                <rect key="frame" x="10" y="504" width="373" height="35"/>
+                                <rect key="frame" x="10" y="704" width="373" height="32"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Go To Graph View"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Go To Graph View">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="BauhausStd-Medium"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="graphTapped:" destination="u8F-56-XS6" eventType="touchUpInside" id="Ucx-6i-ccs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18N-h1-AgR">
-                                <rect key="frame" x="10" y="589" width="373" height="35"/>
+                                <rect key="frame" x="10" y="756" width="373" height="32"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Go Home"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Go Home">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="BauhausStd-Medium"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="homeTapped:" destination="u8F-56-XS6" eventType="touchUpInside" id="Rd6-x2-g1h"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-- UNITS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUL-5n-10A">
-                                <rect key="frame" x="10" y="208" width="373" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="10" y="200" width="373" height="17"/>
+                                <fontDescription key="fontDescription" name="BauhausStd-Medium" family="Bauhaus Std" pointSize="17"/>
+                                <color key="textColor" name="Gray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MEASUREMENT TYPE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9PE-BB-e3M">
-                                <rect key="frame" x="10" y="167" width="373" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="10" y="163" width="373" height="17"/>
+                                <fontDescription key="fontDescription" name="BauhausStd-Medium" family="Bauhaus Std" pointSize="17"/>
+                                <color key="textColor" name="Gray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHp-SZ-8Hb">
-                                <rect key="frame" x="10" y="259" width="373" height="35"/>
+                                <rect key="frame" x="10" y="247" width="373" height="32"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Zero Measurement"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Zero Measurement">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="BauhausStd-Medium"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="zeroTapped:" destination="u8F-56-XS6" eventType="touchUpInside" id="UFb-VH-Mx6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sy2-8D-Xsr">
-                                <rect key="frame" x="10" y="113" width="373" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="10" y="113" width="373" height="20"/>
+                                <fontDescription key="fontDescription" name="BauhausStd-Medium" family="Bauhaus Std" pointSize="20"/>
+                                <color key="textColor" name="Gray"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlb-uh-Mhn">
+                                <rect key="frame" x="10" y="600" width="373" height="32"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Export Data">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="BauhausStd-Medium"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="exportTapped:" destination="u8F-56-XS6" eventType="touchUpInside" id="grb-v3-WzN"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="hpk-Lw-QMR">
+                                <rect key="frame" x="69" y="349" width="255" height="151"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="76K-0L-8sM"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Blackish"/>
                         <constraints>
                             <constraint firstItem="76K-0L-8sM" firstAttribute="trailing" secondItem="Sy2-8D-Xsr" secondAttribute="trailing" constant="10" id="Acf-wp-r1v"/>
-                            <constraint firstItem="18N-h1-AgR" firstAttribute="top" secondItem="lbb-Tw-iMs" secondAttribute="bottom" constant="50" id="ETk-DN-umg"/>
                             <constraint firstItem="zHp-SZ-8Hb" firstAttribute="top" secondItem="xUL-5n-10A" secondAttribute="bottom" constant="30" id="FOP-bm-9yh"/>
                             <constraint firstItem="18N-h1-AgR" firstAttribute="leading" secondItem="76K-0L-8sM" secondAttribute="leading" constant="10" id="HDh-oK-qcC"/>
+                            <constraint firstItem="rlb-uh-Mhn" firstAttribute="leading" secondItem="76K-0L-8sM" secondAttribute="leading" constant="10" id="Hb3-3z-9GW"/>
+                            <constraint firstItem="76K-0L-8sM" firstAttribute="trailing" secondItem="rlb-uh-Mhn" secondAttribute="trailing" constant="10" id="Ic4-Jj-SRA"/>
                             <constraint firstItem="TaZ-9L-33c" firstAttribute="leading" secondItem="76K-0L-8sM" secondAttribute="leading" constant="10" id="Iwo-fe-ttq"/>
                             <constraint firstItem="76K-0L-8sM" firstAttribute="trailing" secondItem="9PE-BB-e3M" secondAttribute="trailing" constant="10" id="Nge-FD-zyi"/>
+                            <constraint firstItem="lbb-Tw-iMs" firstAttribute="top" secondItem="I9U-Ax-hqq" secondAttribute="bottom" constant="20" id="OuY-QP-XbO"/>
+                            <constraint firstItem="I9U-Ax-hqq" firstAttribute="top" secondItem="rlb-uh-Mhn" secondAttribute="bottom" constant="20" id="PsF-1R-uaF"/>
                             <constraint firstItem="xUL-5n-10A" firstAttribute="top" secondItem="9PE-BB-e3M" secondAttribute="bottom" constant="20" id="Pyx-ri-ZEb"/>
-                            <constraint firstItem="lbb-Tw-iMs" firstAttribute="top" secondItem="I9U-Ax-hqq" secondAttribute="bottom" constant="20" id="Rfo-hc-CFp"/>
                             <constraint firstItem="xUL-5n-10A" firstAttribute="leading" secondItem="76K-0L-8sM" secondAttribute="leading" constant="10" id="TyU-15-iFo"/>
                             <constraint firstItem="9PE-BB-e3M" firstAttribute="top" secondItem="Sy2-8D-Xsr" secondAttribute="bottom" constant="30" id="VvE-kb-A2j"/>
                             <constraint firstItem="9PE-BB-e3M" firstAttribute="leading" secondItem="76K-0L-8sM" secondAttribute="leading" constant="10" id="WBb-Qv-S5A"/>
                             <constraint firstItem="76K-0L-8sM" firstAttribute="trailing" secondItem="TaZ-9L-33c" secondAttribute="trailing" constant="10" id="X0S-id-oFM"/>
                             <constraint firstItem="zHp-SZ-8Hb" firstAttribute="leading" secondItem="76K-0L-8sM" secondAttribute="leading" constant="10" id="X9M-1i-DFf"/>
+                            <constraint firstItem="18N-h1-AgR" firstAttribute="top" secondItem="lbb-Tw-iMs" secondAttribute="bottom" constant="20" id="XOR-og-f3q"/>
                             <constraint firstItem="lbb-Tw-iMs" firstAttribute="leading" secondItem="76K-0L-8sM" secondAttribute="leading" constant="10" id="YWk-7l-R8L"/>
                             <constraint firstItem="76K-0L-8sM" firstAttribute="trailing" secondItem="18N-h1-AgR" secondAttribute="trailing" constant="10" id="Z6F-mJ-wYk"/>
                             <constraint firstItem="I9U-Ax-hqq" firstAttribute="leading" secondItem="76K-0L-8sM" secondAttribute="leading" constant="10" id="de5-6w-qo9"/>
-                            <constraint firstItem="TaZ-9L-33c" firstAttribute="top" secondItem="zHp-SZ-8Hb" secondAttribute="bottom" constant="70" id="e8f-7U-QCc"/>
+                            <constraint firstItem="76K-0L-8sM" firstAttribute="bottom" secondItem="18N-h1-AgR" secondAttribute="bottom" constant="30" id="dfh-XO-Opb"/>
+                            <constraint firstItem="TaZ-9L-33c" firstAttribute="top" secondItem="zHp-SZ-8Hb" secondAttribute="bottom" constant="30" id="e8f-7U-QCc"/>
                             <constraint firstItem="76K-0L-8sM" firstAttribute="trailing" secondItem="zHp-SZ-8Hb" secondAttribute="trailing" constant="10" id="fHd-4C-PDr"/>
                             <constraint firstItem="Sy2-8D-Xsr" firstAttribute="leading" secondItem="76K-0L-8sM" secondAttribute="leading" constant="10" id="hW0-Mf-BGB"/>
                             <constraint firstItem="76K-0L-8sM" firstAttribute="trailing" secondItem="lbb-Tw-iMs" secondAttribute="trailing" constant="10" id="sl5-SM-Mv8"/>
                             <constraint firstItem="Sy2-8D-Xsr" firstAttribute="top" secondItem="76K-0L-8sM" secondAttribute="top" constant="10" id="uPO-3O-msz"/>
                             <constraint firstItem="76K-0L-8sM" firstAttribute="trailing" secondItem="xUL-5n-10A" secondAttribute="trailing" constant="10" id="ueK-Kk-hrD"/>
                             <constraint firstItem="76K-0L-8sM" firstAttribute="trailing" secondItem="I9U-Ax-hqq" secondAttribute="trailing" constant="10" id="v2b-Py-3ah"/>
-                            <constraint firstItem="I9U-Ax-hqq" firstAttribute="top" secondItem="TaZ-9L-33c" secondAttribute="bottom" constant="50" id="vfx-VY-pQx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wJt-Oq-cvL"/>
                     <connections>
                         <outlet property="expNameLabel" destination="Sy2-8D-Xsr" id="nNi-SM-Gyo"/>
+                        <outlet property="exportButton" destination="rlb-uh-Mhn" id="fsC-Wf-23d"/>
+                        <outlet property="graphButton" destination="lbb-Tw-iMs" id="qQa-yX-tUo"/>
+                        <outlet property="homeButton" destination="18N-h1-AgR" id="nU9-k3-tZi"/>
                         <outlet property="measTypeLabel" destination="9PE-BB-e3M" id="Zji-yc-evV"/>
                         <outlet property="measValLabel" destination="xUL-5n-10A" id="SF0-pP-tMR"/>
+                        <outlet property="measureButton" destination="TaZ-9L-33c" id="Jtg-qZ-chO"/>
+                        <outlet property="tableButton" destination="I9U-Ax-hqq" id="CzA-FV-HDY"/>
+                        <outlet property="zeroButton" destination="zHp-SZ-8Hb" id="C1H-Pv-qlY"/>
                         <segue destination="Iih-Gn-njU" kind="show" identifier="toGraphView" id="caQ-ZW-rj3"/>
-                        <segue destination="qOt-2D-gas" kind="show" identifier="toTableView" id="L3O-NS-FBL"/>
+                        <segue destination="q75-kF-D2u" kind="show" identifier="toAlternate" id="7YQ-tm-7Bh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1UH-t4-WKU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Y1b-Sw-qrY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3653" y="-556"/>
+            <point key="canvasLocation" x="3514" y="-532"/>
         </scene>
-        <!--OneVariableTableView-->
+        <!--OneVariableTableViewOLD-->
         <scene sceneID="xwJ-zE-cK6">
             <objects>
-                <tableViewController title="OneVariableTableView" id="qOt-2D-gas" customClass="OneVariableTableViewController" customModule="SciCorderv1" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="OneVariableTableViewOLD" id="qOt-2D-gas" customClass="OneVariableTableViewController" customModule="SciCorder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="2Sz-yN-YBK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" name="Blackish"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FdB-Fs-7b4">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
@@ -451,67 +803,118 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Gl-Vf-FdD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5189" y="-556"/>
+            <point key="canvasLocation" x="782" y="2031"/>
+        </scene>
+        <!--OneVariableTableView-->
+        <scene sceneID="5ir-Nd-9ty">
+            <objects>
+                <viewController title="OneVariableTableView" id="q75-kF-D2u" customClass="OneVarButtonTableViewController" customModule="SciCorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Biq-wE-eVj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27h-ph-Z4j">
+                                <rect key="frame" x="10" y="773" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add an Offset">
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="offsetTapped:" destination="q75-kF-D2u" eventType="touchUpInside" id="63g-Vj-jsO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="b68-UG-NTj"/>
+                        <color key="backgroundColor" name="Blackish"/>
+                        <constraints>
+                            <constraint firstItem="b68-UG-NTj" firstAttribute="trailing" secondItem="27h-ph-Z4j" secondAttribute="trailing" constant="10" id="hqm-sf-igW"/>
+                            <constraint firstItem="27h-ph-Z4j" firstAttribute="leading" secondItem="b68-UG-NTj" secondAttribute="leading" constant="10" id="w8l-iD-Lmj"/>
+                            <constraint firstItem="b68-UG-NTj" firstAttribute="bottom" secondItem="27h-ph-Z4j" secondAttribute="bottom" constant="10" id="z3r-31-Bfr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XdB-Xm-Dyd"/>
+                    <connections>
+                        <outlet property="offsetButton" destination="27h-ph-Z4j" id="2Kn-HR-e3b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pVO-GX-mvo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5189" y="-607"/>
         </scene>
         <!--OneVariableDataView-->
         <scene sceneID="jyy-Bv-tkI">
             <objects>
-                <viewController title="OneVariableDataView" id="Iih-Gn-njU" sceneMemberID="viewController">
+                <viewController title="OneVariableDataView" id="Iih-Gn-njU" customClass="OneVariableGraphViewController" customModule="SciCorder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ixb-Hy-CAM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wyk-Nm-5oG">
-                                <rect key="frame" x="175" y="246" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udo-RU-Az4">
+                                <rect key="frame" x="10" y="774" width="373" height="24"/>
+                                <fontDescription key="fontDescription" name="BauhausStd-Medium" family="Bauhaus Std" pointSize="24"/>
+                                <color key="textColor" name="Gray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aix-Ng-FsT"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Blackish"/>
+                        <constraints>
+                            <constraint firstItem="Udo-RU-Az4" firstAttribute="leading" secondItem="aix-Ng-FsT" secondAttribute="leading" constant="10" id="9Lu-9d-wz3"/>
+                            <constraint firstItem="aix-Ng-FsT" firstAttribute="bottom" secondItem="Udo-RU-Az4" secondAttribute="bottom" constant="20" id="SPE-gd-vKt"/>
+                            <constraint firstItem="aix-Ng-FsT" firstAttribute="trailing" secondItem="Udo-RU-Az4" secondAttribute="trailing" constant="10" id="lR9-Zu-W23"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qa5-CI-utt"/>
+                    <connections>
+                        <outlet property="summaryLabel" destination="Udo-RU-Az4" id="0pR-eU-v0f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9G-z7-LNN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5189" y="-1394"/>
+            <point key="canvasLocation" x="5188.5496183206105" y="-1394.3661971830986"/>
         </scene>
         <!--TwoVariableGraphView-->
         <scene sceneID="iOn-ar-boF">
             <objects>
-                <viewController title="TwoVariableGraphView" id="Ptw-6E-mwf" customClass="TwoVariableGraphViewController" customModule="SciCorderv1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="TwoVariableGraphView" id="Ptw-6E-mwf" customClass="TwoVariableGraphViewController" customModule="SciCorder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jw6-VX-I2w">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cDd-3L-viJ">
-                                <rect key="frame" x="113" y="210" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngl-cT-F2d">
+                                <rect key="frame" x="10" y="774" width="373" height="24"/>
+                                <fontDescription key="fontDescription" name="BauhausStd-Medium" family="Bauhaus Std" pointSize="24"/>
+                                <color key="textColor" name="Gray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qwF-Hs-agO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Blackish"/>
+                        <constraints>
+                            <constraint firstItem="Ngl-cT-F2d" firstAttribute="leading" secondItem="qwF-Hs-agO" secondAttribute="leading" constant="10" id="1Jy-Co-BSw"/>
+                            <constraint firstItem="qwF-Hs-agO" firstAttribute="trailing" secondItem="Ngl-cT-F2d" secondAttribute="trailing" constant="10" id="3Sf-fS-iN2"/>
+                            <constraint firstItem="qwF-Hs-agO" firstAttribute="bottom" secondItem="Ngl-cT-F2d" secondAttribute="bottom" constant="20" id="xbs-rl-GIa"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="afV-5O-jhv"/>
                     <connections>
-                        <outlet property="myChart" destination="cDd-3L-viJ" id="fhK-b5-jjB"/>
+                        <outlet property="fitInfo" destination="Ngl-cT-F2d" id="VvW-6l-k7J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DT8-pG-J6G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5188.5496183206105" y="367.6056338028169"/>
         </scene>
-        <!--TwoVariableTableView-->
+        <!--TwoVariableTableViewOLD-->
         <scene sceneID="t5w-Ye-mrh">
             <objects>
-                <tableViewController title="TwoVariableTableView" id="frv-oj-bLZ" customClass="TwoVariableTableViewController" customModule="SciCorderv1" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="TwoVariableTableViewOLD" id="frv-oj-bLZ" customClass="TwoVariableTableViewController" customModule="SciCorder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="n9E-LU-jcJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" name="Blackish"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dDh-tZ-O7j">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
@@ -531,37 +934,110 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="upX-9i-Qe5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5189" y="1187"/>
+            <point key="canvasLocation" x="-662" y="2105"/>
+        </scene>
+        <!--FitView-->
+        <scene sceneID="rDx-hN-0Oj">
+            <objects>
+                <viewController title="FitView" id="cXb-LZ-K5F" customClass="FitViewController" customModule="SciCorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Pj-aJ-L5v">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S09-8X-fsv">
+                                <rect key="frame" x="10" y="113" width="373" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXM-6Y-n08">
+                                <rect key="frame" x="10" y="339" width="373" height="32"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Apply Fit">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="BauhausStd-Medium"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="fitTapped:" destination="cXb-LZ-K5F" eventType="touchUpInside" id="MEh-u5-crX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSG-0n-vWg">
+                                <rect key="frame" x="10" y="411" width="373" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="gqC-BK-8f9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BauhausStd-Medium" family="Bauhaus Std" pointSize="24"/>
+                                <color key="textColor" name="Gray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lRE-CT-8fw"/>
+                        <color key="backgroundColor" name="Blackish"/>
+                        <constraints>
+                            <constraint firstItem="S09-8X-fsv" firstAttribute="leading" secondItem="lRE-CT-8fw" secondAttribute="leading" constant="10" id="3R5-Ke-ahY"/>
+                            <constraint firstItem="lRE-CT-8fw" firstAttribute="trailing" secondItem="xSG-0n-vWg" secondAttribute="trailing" constant="10" id="Hog-Tx-khf"/>
+                            <constraint firstItem="xSG-0n-vWg" firstAttribute="top" secondItem="mXM-6Y-n08" secondAttribute="bottom" constant="40" id="OBy-MD-d0I"/>
+                            <constraint firstItem="mXM-6Y-n08" firstAttribute="leading" secondItem="lRE-CT-8fw" secondAttribute="leading" constant="10" id="VhB-Ok-Ma5"/>
+                            <constraint firstItem="S09-8X-fsv" firstAttribute="top" secondItem="lRE-CT-8fw" secondAttribute="top" constant="10" id="WFF-SJ-dfv"/>
+                            <constraint firstItem="lRE-CT-8fw" firstAttribute="trailing" secondItem="mXM-6Y-n08" secondAttribute="trailing" constant="10" id="eJZ-On-sA1"/>
+                            <constraint firstItem="lRE-CT-8fw" firstAttribute="trailing" secondItem="S09-8X-fsv" secondAttribute="trailing" constant="10" id="oXr-YU-mYc"/>
+                            <constraint firstItem="xSG-0n-vWg" firstAttribute="leading" secondItem="lRE-CT-8fw" secondAttribute="leading" constant="10" id="phC-AK-bEz"/>
+                            <constraint firstItem="mXM-6Y-n08" firstAttribute="top" secondItem="S09-8X-fsv" secondAttribute="bottom" constant="10" id="ra1-Ge-cmx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xkk-fm-dte"/>
+                    <connections>
+                        <outlet property="fitButton" destination="mXM-6Y-n08" id="xWh-iV-dFD"/>
+                        <outlet property="fitLabel" destination="xSG-0n-vWg" id="yO4-Ew-trJ"/>
+                        <outlet property="picker" destination="S09-8X-fsv" id="C4O-6T-s5l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qEM-Bk-mIS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5189" y="2115"/>
         </scene>
         <!--TwoVariableSelectView-->
         <scene sceneID="jmW-0S-vZA">
             <objects>
-                <viewController title="TwoVariableSelectView" id="eP0-yt-HWh" customClass="TwoVariableSelectViewController" customModule="SciCorderv1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="TwoVariableSelectView" id="eP0-yt-HWh" customClass="TwoVariableSelectViewController" customModule="SciCorder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Tx-4y-5tf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two Variable Select View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8i-6t-Xx2">
-                                <rect key="frame" x="10" y="113" width="373" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="10" y="113" width="373" height="17"/>
+                                <fontDescription key="fontDescription" name="BauhausStd-Medium" family="Bauhaus Std" pointSize="17"/>
+                                <color key="textColor" name="Gray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AbV-uY-KRH">
-                                <rect key="frame" x="10" y="184" width="373" height="216"/>
+                                <rect key="frame" x="10" y="180" width="373" height="216"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eta-Ll-2fr">
-                                <rect key="frame" x="10" y="450" width="373" height="35"/>
+                                <rect key="frame" x="10" y="446" width="373" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Proceed"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Proceed">
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
                                 <connections>
+                                    <action selector="proceedButton:" destination="ork-DN-cXC" eventType="touchUpInside" id="NFm-3Y-aGm"/>
                                     <action selector="proceedTapped:" destination="RHu-8Y-i4n" eventType="touchUpInside" id="9NR-S7-zTC"/>
                                     <action selector="proceedTapped:" destination="eP0-yt-HWh" eventType="touchUpInside" id="O5N-Wy-DKP"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="Nm2-wM-AQk">
+                                <rect key="frame" x="27" y="489" width="338" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mpy-bV-qCN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Blackish"/>
                         <constraints>
                             <constraint firstItem="eta-Ll-2fr" firstAttribute="leading" secondItem="Mpy-bV-qCN" secondAttribute="leading" constant="10" id="10g-2p-qN3"/>
                             <constraint firstItem="t8i-6t-Xx2" firstAttribute="leading" secondItem="Mpy-bV-qCN" secondAttribute="leading" constant="10" id="1Oi-z6-CBh"/>
@@ -578,52 +1054,90 @@
                     <connections>
                         <outlet property="expNameLabel" destination="t8i-6t-Xx2" id="wsc-Ye-PuW"/>
                         <outlet property="picker" destination="AbV-uY-KRH" id="BVR-bg-qLz"/>
+                        <outlet property="proceedButton" destination="eta-Ll-2fr" id="gNc-hD-n99"/>
                         <segue destination="7qQ-5T-g0a" kind="show" identifier="toTwoVariableExperimentView" id="QjD-0B-9q1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yC9-5k-ikt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ork-DN-cXC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2053" y="-556"/>
+            <point key="canvasLocation" x="2052.6717557251909" y="-556.33802816901414"/>
         </scene>
         <!--ExperimentTypeView-->
         <scene sceneID="Cdw-QK-zBK">
             <objects>
-                <viewController title="ExperimentTypeView" id="m60-rM-Dtb" customClass="ExperimentTypeViewController" customModule="SciCorderv1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ExperimentTypeView" id="m60-rM-Dtb" customClass="ExperimentTypeViewController" customModule="SciCorder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fer-R8-01C">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74F-dH-jv3">
-                                <rect key="frame" x="57" y="507" width="280" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXB-ag-Ho0">
+                                <rect key="frame" x="10" y="607" width="373" height="38"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Create a Two Variable Experiment"/>
-                                <connections>
-                                    <action selector="doubleTapped:" destination="m60-rM-Dtb" eventType="touchUpInside" id="2cy-nD-hcj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXB-ag-Ho0">
-                                <rect key="frame" x="57" y="356" width="280" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Create a One Variable Experiment"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Create a One Variable Experiment">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="BauhausStd-Medium"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="singleTapped:" destination="m60-rM-Dtb" eventType="touchUpInside" id="TFa-m7-Nok"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="Jlp-TB-L8N">
+                                <rect key="frame" x="10" y="113" width="373" height="444"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74F-dH-jv3">
+                                <rect key="frame" x="10" y="695" width="373" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Create a Two Variable Experiment">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="BauhausStd-Medium"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Gray"/>
+                                    <color key="baseBackgroundColor" name="Orange"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="doubleTapped:" destination="m60-rM-Dtb" eventType="touchUpInside" id="2cy-nD-hcj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JwN-1W-Vdp"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Blackish"/>
+                        <constraints>
+                            <constraint firstItem="JwN-1W-Vdp" firstAttribute="trailing" secondItem="74F-dH-jv3" secondAttribute="trailing" constant="10" id="CDP-QG-Ltd"/>
+                            <constraint firstItem="74F-dH-jv3" firstAttribute="top" secondItem="eXB-ag-Ho0" secondAttribute="bottom" constant="50" id="IDB-P2-YaU"/>
+                            <constraint firstItem="eXB-ag-Ho0" firstAttribute="leading" secondItem="JwN-1W-Vdp" secondAttribute="leading" constant="10" id="IGK-nz-HIO"/>
+                            <constraint firstItem="Jlp-TB-L8N" firstAttribute="leading" secondItem="JwN-1W-Vdp" secondAttribute="leading" constant="10" id="Tfn-es-jT3"/>
+                            <constraint firstItem="74F-dH-jv3" firstAttribute="leading" secondItem="JwN-1W-Vdp" secondAttribute="leading" constant="10" id="UJl-9g-EDl"/>
+                            <constraint firstItem="eXB-ag-Ho0" firstAttribute="top" secondItem="Jlp-TB-L8N" secondAttribute="bottom" constant="50" id="VVy-9K-fep"/>
+                            <constraint firstItem="JwN-1W-Vdp" firstAttribute="trailing" secondItem="eXB-ag-Ho0" secondAttribute="trailing" constant="10" id="dzr-vW-xTT"/>
+                            <constraint firstItem="JwN-1W-Vdp" firstAttribute="trailing" secondItem="Jlp-TB-L8N" secondAttribute="trailing" constant="10" id="lds-aJ-Yya"/>
+                            <constraint firstItem="Jlp-TB-L8N" firstAttribute="top" secondItem="JwN-1W-Vdp" secondAttribute="top" constant="10" id="nUG-WL-Zi8"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="n1c-G0-9T3"/>
                     <connections>
+                        <outlet property="createOneButton" destination="eXB-ag-Ho0" id="CmO-Up-mkd"/>
+                        <outlet property="createTwoButton" destination="74F-dH-jv3" id="aM5-MW-eIi"/>
                         <segue destination="eP0-yt-HWh" kind="show" identifier="toTwoVariableSelectView" id="sdi-qi-dgX"/>
                         <segue destination="RHu-8Y-i4n" kind="show" identifier="toOneVariableSelectView" id="gSL-ih-928"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o1x-KG-AaO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="876" y="-556"/>
+            <point key="canvasLocation" x="875.57251908396938" y="-556.33802816901414"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -631,6 +1145,16 @@
         <segue reference="QjD-0B-9q1"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="LaunchImage" width="582" height="444"/>
+        <namedColor name="Blackish">
+            <color red="0.20399999618530273" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Gray">
+            <color red="0.81599998474121094" green="0.87000000476837158" blue="0.88599997758865356" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Orange">
+            <color red="0.92699998617172241" green="0.44600000977516174" blue="0.27399998903274536" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

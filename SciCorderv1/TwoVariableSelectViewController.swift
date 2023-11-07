@@ -6,12 +6,15 @@ class TwoVariableSelectViewController: UIViewController, UIPickerViewDelegate, U
     
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var expNameLabel: UILabel!
+    @IBOutlet weak var proceedButton: UIButton!
     
     var types: [String] = []
     var expName: String = "default"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        proceedButton.titleLabel?.font = UIFont.init(name: "BauhausStd-Medium", size: 18)
         
         types = K.measurementTypes
         expNameLabel.text = expName
@@ -126,7 +129,11 @@ class TwoVariableSelectViewController: UIViewController, UIPickerViewDelegate, U
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return types.count
+        if(component == 0){
+            return types.count
+        } else {
+            return types.count - 1
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

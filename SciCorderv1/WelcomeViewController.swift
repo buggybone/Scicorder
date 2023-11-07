@@ -2,8 +2,15 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+    @IBOutlet weak var newButton: UIButton!
+    @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        newButton.titleLabel?.font = UIFont.init(name: "BauhausStd-Medium", size: 18)
+        continueButton.titleLabel?.font = UIFont.init(name: "BauhausStd-Medium", size: 18)
+        deleteButton.titleLabel?.font = UIFont.init(name: "BauhausStd-Medium", size: 18)
     }
     
    

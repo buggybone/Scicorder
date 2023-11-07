@@ -1,11 +1,12 @@
 import UIKit
+import SwiftUI
 
 class OneVariableSelectViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
 
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var expNameLabel: UILabel!
-    
+    @IBOutlet weak var proceedButton: UIButton!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -18,6 +19,7 @@ class OneVariableSelectViewController: UIViewController, UIPickerViewDelegate, U
         expNameLabel.text = expName
         self.picker.delegate = self
         self.picker.dataSource = self
+        proceedButton.titleLabel?.font = UIFont.init(name: "BauhausStd-Medium", size: 18)
     }
     
     @IBAction func proceedTapped(_ sender: Any) {
@@ -60,12 +62,18 @@ class OneVariableSelectViewController: UIViewController, UIPickerViewDelegate, U
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return types.count
+        return types.count - 1
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return types[row]
     }
+    
+   /* func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let attributedString = NSAttributedString(string: types[row], attributes: [NSAttributedString.Key.foregroundColor : UIColor(Color("Gray")), NSAttributedString.Key.font : UIFont(name: "BauhausStd-Medium", size: 18)!])
+        return attributedString
+    }*/
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let oneVarExpView = segue.destination as? OneVariableExperimentViewController{
@@ -74,5 +82,5 @@ class OneVariableSelectViewController: UIViewController, UIPickerViewDelegate, U
             }
         }
     }
-
+    
 }

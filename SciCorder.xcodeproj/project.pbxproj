@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		DD2B44BB2AB4244A0029FEAD /* OneVariableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2B44BA2AB4244A0029FEAD /* OneVariableTableViewController.swift */; };
 		DD2B44BD2ABABA1E0029FEAD /* TwoVariableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2B44BC2ABABA1E0029FEAD /* TwoVariableTableViewController.swift */; };
+		DD3815EA2AF98821007E0546 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DD3815E92AF98821007E0546 /* SnapKit */; };
+		DD3815EC2AF9C490007E0546 /* OneVarButtonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3815EB2AF9C490007E0546 /* OneVarButtonTableViewController.swift */; };
+		DD3815EE2AF9CCF2007E0546 /* TwoVarButtonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3815ED2AF9CCF2007E0546 /* TwoVarButtonTableViewController.swift */; };
 		DD3BBCFF2A757C3900EAA00E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3BBCFE2A757C3900EAA00E /* AppDelegate.swift */; };
 		DD3BBD012A757C3900EAA00E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3BBD002A757C3900EAA00E /* SceneDelegate.swift */; };
 		DD3BBD062A757C3900EAA00E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD3BBD042A757C3900EAA00E /* Main.storyboard */; };
@@ -25,12 +28,17 @@
 		DD3BBD542A8EBD0400EAA00E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3BBD532A8EBD0400EAA00E /* Constants.swift */; };
 		DDE484672AC14B6E003B8F4D /* TwoVariableGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE484662AC14B6E003B8F4D /* TwoVariableGraphViewController.swift */; };
 		DDE484692AC2A2F9003B8F4D /* DataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE484682AC2A2F9003B8F4D /* DataPoint.swift */; };
+		DDE4848B2AE62D43003B8F4D /* FitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE4848A2AE62D43003B8F4D /* FitViewController.swift */; };
+		DDE4848D2AE748BE003B8F4D /* OneVariableGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE4848C2AE748BE003B8F4D /* OneVariableGraphViewController.swift */; };
+		DDE4848F2AF60493003B8F4D /* BauhausStd-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE4848E2AF60493003B8F4D /* BauhausStd-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DD2B44BA2AB4244A0029FEAD /* OneVariableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneVariableTableViewController.swift; sourceTree = "<group>"; };
 		DD2B44BC2ABABA1E0029FEAD /* TwoVariableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoVariableTableViewController.swift; sourceTree = "<group>"; };
-		DD3BBCFB2A757C3900EAA00E /* SciCorderv1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SciCorderv1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD3815EB2AF9C490007E0546 /* OneVarButtonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneVarButtonTableViewController.swift; sourceTree = "<group>"; };
+		DD3815ED2AF9CCF2007E0546 /* TwoVarButtonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoVarButtonTableViewController.swift; sourceTree = "<group>"; };
+		DD3BBCFB2A757C3900EAA00E /* SciCorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SciCorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD3BBCFE2A757C3900EAA00E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD3BBD002A757C3900EAA00E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DD3BBD052A757C3900EAA00E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,6 +56,9 @@
 		DD3BBD532A8EBD0400EAA00E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DDE484662AC14B6E003B8F4D /* TwoVariableGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoVariableGraphViewController.swift; sourceTree = "<group>"; };
 		DDE484682AC2A2F9003B8F4D /* DataPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPoint.swift; sourceTree = "<group>"; };
+		DDE4848A2AE62D43003B8F4D /* FitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitViewController.swift; sourceTree = "<group>"; };
+		DDE4848C2AE748BE003B8F4D /* OneVariableGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneVariableGraphViewController.swift; sourceTree = "<group>"; };
+		DDE4848E2AF60493003B8F4D /* BauhausStd-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BauhausStd-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD3815EA2AF98821007E0546 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,7 +84,7 @@
 		DD3BBCFC2A757C3900EAA00E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD3BBCFB2A757C3900EAA00E /* SciCorderv1.app */,
+				DD3BBCFB2A757C3900EAA00E /* SciCorder.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,9 +92,12 @@
 		DD3BBCFD2A757C3900EAA00E /* SciCorderv1 */ = {
 			isa = PBXGroup;
 			children = (
+				DD3815ED2AF9CCF2007E0546 /* TwoVarButtonTableViewController.swift */,
 				DD3BBCFE2A757C3900EAA00E /* AppDelegate.swift */,
 				DD3BBD002A757C3900EAA00E /* SceneDelegate.swift */,
 				DD3BBD042A757C3900EAA00E /* Main.storyboard */,
+				DD3815EB2AF9C490007E0546 /* OneVarButtonTableViewController.swift */,
+				DDE4848C2AE748BE003B8F4D /* OneVariableGraphViewController.swift */,
 				DD3BBD512A8C8C9E00EAA00E /* TwoVariableExperimentViewController.swift */,
 				DDE484662AC14B6E003B8F4D /* TwoVariableGraphViewController.swift */,
 				DDE484682AC2A2F9003B8F4D /* DataPoint.swift */,
@@ -90,15 +105,17 @@
 				DD3BBD4F2A8C833F00EAA00E /* OneVariableExperimentViewController.swift */,
 				DD2B44BA2AB4244A0029FEAD /* OneVariableTableViewController.swift */,
 				DD3BBD4B2A8C7B1E00EAA00E /* ExperimentTypeViewController.swift */,
+				DDE4848A2AE62D43003B8F4D /* FitViewController.swift */,
 				DD3BBD3F2A8C58C400EAA00E /* OneVariableSelectViewController.swift */,
 				DD3BBD532A8EBD0400EAA00E /* Constants.swift */,
+				DD3BBD152A75D7A500EAA00E /* WelcomeViewController.swift */,
 				DD3BBD4D2A8C7FB300EAA00E /* TwoVariableSelectViewController.swift */,
 				DD3BBD3D2A8C560300EAA00E /* ExperimentSelectViewController.swift */,
-				DD3BBD152A75D7A500EAA00E /* WelcomeViewController.swift */,
 				DD3BBD0A2A757C3B00EAA00E /* Assets.xcassets */,
 				DD3BBD0C2A757C3B00EAA00E /* LaunchScreen.storyboard */,
 				DD3BBD0F2A757C3B00EAA00E /* Info.plist */,
 				DD3BBD072A757C3900EAA00E /* SciCorderv1.xcdatamodeld */,
+				DDE4848E2AF60493003B8F4D /* BauhausStd-Medium.ttf */,
 			);
 			path = SciCorderv1;
 			sourceTree = "<group>";
@@ -106,9 +123,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DD3BBCFA2A757C3900EAA00E /* SciCorderv1 */ = {
+		DD3BBCFA2A757C3900EAA00E /* SciCorder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD3BBD122A757C3B00EAA00E /* Build configuration list for PBXNativeTarget "SciCorderv1" */;
+			buildConfigurationList = DD3BBD122A757C3B00EAA00E /* Build configuration list for PBXNativeTarget "SciCorder" */;
 			buildPhases = (
 				DD3BBCF72A757C3900EAA00E /* Sources */,
 				DD3BBCF82A757C3900EAA00E /* Frameworks */,
@@ -118,9 +135,12 @@
 			);
 			dependencies = (
 			);
-			name = SciCorderv1;
+			name = SciCorder;
+			packageProductDependencies = (
+				DD3815E92AF98821007E0546 /* SnapKit */,
+			);
 			productName = SciCorderv1;
-			productReference = DD3BBCFB2A757C3900EAA00E /* SciCorderv1.app */;
+			productReference = DD3BBCFB2A757C3900EAA00E /* SciCorder.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -138,7 +158,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DD3BBCF62A757C3900EAA00E /* Build configuration list for PBXProject "SciCorderv1" */;
+			buildConfigurationList = DD3BBCF62A757C3900EAA00E /* Build configuration list for PBXProject "SciCorder" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -147,11 +167,14 @@
 				Base,
 			);
 			mainGroup = DD3BBCF22A757C3900EAA00E;
+			packageReferences = (
+				DD3815E82AF98820007E0546 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = DD3BBCFC2A757C3900EAA00E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DD3BBCFA2A757C3900EAA00E /* SciCorderv1 */,
+				DD3BBCFA2A757C3900EAA00E /* SciCorder */,
 			);
 		};
 /* End PBXProject section */
@@ -164,6 +187,7 @@
 				DD3BBD0E2A757C3B00EAA00E /* LaunchScreen.storyboard in Resources */,
 				DD3BBD0B2A757C3B00EAA00E /* Assets.xcassets in Resources */,
 				DD3BBD062A757C3900EAA00E /* Main.storyboard in Resources */,
+				DDE4848F2AF60493003B8F4D /* BauhausStd-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,10 +202,14 @@
 				DD3BBD522A8C8C9E00EAA00E /* TwoVariableExperimentViewController.swift in Sources */,
 				DD3BBD542A8EBD0400EAA00E /* Constants.swift in Sources */,
 				DD2B44BB2AB4244A0029FEAD /* OneVariableTableViewController.swift in Sources */,
+				DDE4848B2AE62D43003B8F4D /* FitViewController.swift in Sources */,
 				DD3BBD162A75D7A500EAA00E /* WelcomeViewController.swift in Sources */,
+				DDE4848D2AE748BE003B8F4D /* OneVariableGraphViewController.swift in Sources */,
 				DD3BBD092A757C3900EAA00E /* SciCorderv1.xcdatamodeld in Sources */,
 				DD3BBD3E2A8C560300EAA00E /* ExperimentSelectViewController.swift in Sources */,
 				DD3BBD4C2A8C7B1E00EAA00E /* ExperimentTypeViewController.swift in Sources */,
+				DD3815EE2AF9CCF2007E0546 /* TwoVarButtonTableViewController.swift in Sources */,
+				DD3815EC2AF9C490007E0546 /* OneVarButtonTableViewController.swift in Sources */,
 				DD3BBCFF2A757C3900EAA00E /* AppDelegate.swift in Sources */,
 				DD3BBD012A757C3900EAA00E /* SceneDelegate.swift in Sources */,
 				DD3BBD402A8C58C400EAA00E /* OneVariableSelectViewController.swift in Sources */,
@@ -387,7 +415,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DD3BBCF62A757C3900EAA00E /* Build configuration list for PBXProject "SciCorderv1" */ = {
+		DD3BBCF62A757C3900EAA00E /* Build configuration list for PBXProject "SciCorder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD3BBD102A757C3B00EAA00E /* Debug */,
@@ -396,7 +424,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD3BBD122A757C3B00EAA00E /* Build configuration list for PBXNativeTarget "SciCorderv1" */ = {
+		DD3BBD122A757C3B00EAA00E /* Build configuration list for PBXNativeTarget "SciCorder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD3BBD132A757C3B00EAA00E /* Debug */,
@@ -406,6 +434,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DD3815E82AF98820007E0546 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DD3815E92AF98821007E0546 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD3815E82AF98820007E0546 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		DD3BBD072A757C3900EAA00E /* SciCorderv1.xcdatamodeld */ = {
