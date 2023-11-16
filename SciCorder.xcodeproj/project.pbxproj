@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		DD2B44BB2AB4244A0029FEAD /* OneVariableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2B44BA2AB4244A0029FEAD /* OneVariableTableViewController.swift */; };
 		DD2B44BD2ABABA1E0029FEAD /* TwoVariableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2B44BC2ABABA1E0029FEAD /* TwoVariableTableViewController.swift */; };
+		DD3350102B05824900BFA3BC /* SciCorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD33500F2B05824900BFA3BC /* SciCorderTests.swift */; };
+		DD3350162B05825100BFA3BC /* MeasureTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3350072B0581BF00BFA3BC /* MeasureTester.swift */; };
+		DD3350182B05934C00BFA3BC /* FitTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3350172B05934C00BFA3BC /* FitTester.swift */; };
 		DD3815EA2AF98821007E0546 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DD3815E92AF98821007E0546 /* SnapKit */; };
 		DD3815EC2AF9C490007E0546 /* OneVarButtonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3815EB2AF9C490007E0546 /* OneVarButtonTableViewController.swift */; };
 		DD3815EE2AF9CCF2007E0546 /* TwoVarButtonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3815ED2AF9CCF2007E0546 /* TwoVarButtonTableViewController.swift */; };
@@ -33,9 +36,23 @@
 		DDE4848F2AF60493003B8F4D /* BauhausStd-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE4848E2AF60493003B8F4D /* BauhausStd-Medium.ttf */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DD3350112B05824900BFA3BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD3BBCF32A757C3900EAA00E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD3BBCFA2A757C3900EAA00E;
+			remoteInfo = SciCorder;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		DD2B44BA2AB4244A0029FEAD /* OneVariableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneVariableTableViewController.swift; sourceTree = "<group>"; };
 		DD2B44BC2ABABA1E0029FEAD /* TwoVariableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoVariableTableViewController.swift; sourceTree = "<group>"; };
+		DD3350072B0581BF00BFA3BC /* MeasureTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureTester.swift; sourceTree = "<group>"; };
+		DD33500D2B05824900BFA3BC /* SciCorderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SciCorderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD33500F2B05824900BFA3BC /* SciCorderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SciCorderTests.swift; sourceTree = "<group>"; };
+		DD3350172B05934C00BFA3BC /* FitTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitTester.swift; sourceTree = "<group>"; };
 		DD3815EB2AF9C490007E0546 /* OneVarButtonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneVarButtonTableViewController.swift; sourceTree = "<group>"; };
 		DD3815ED2AF9CCF2007E0546 /* TwoVarButtonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoVarButtonTableViewController.swift; sourceTree = "<group>"; };
 		DD3BBCFB2A757C3900EAA00E /* SciCorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SciCorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +79,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DD33500A2B05824900BFA3BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD3BBCF82A757C3900EAA00E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -73,10 +97,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD33500E2B05824900BFA3BC /* SciCorderTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD3350072B0581BF00BFA3BC /* MeasureTester.swift */,
+				DD33500F2B05824900BFA3BC /* SciCorderTests.swift */,
+				DD3350172B05934C00BFA3BC /* FitTester.swift */,
+			);
+			path = SciCorderTests;
+			sourceTree = "<group>";
+		};
 		DD3BBCF22A757C3900EAA00E = {
 			isa = PBXGroup;
 			children = (
 				DD3BBCFD2A757C3900EAA00E /* SciCorderv1 */,
+				DD33500E2B05824900BFA3BC /* SciCorderTests */,
 				DD3BBCFC2A757C3900EAA00E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				DD3BBCFB2A757C3900EAA00E /* SciCorder.app */,
+				DD33500D2B05824900BFA3BC /* SciCorderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,6 +159,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DD33500C2B05824900BFA3BC /* SciCorderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD3350132B05824900BFA3BC /* Build configuration list for PBXNativeTarget "SciCorderTests" */;
+			buildPhases = (
+				DD3350092B05824900BFA3BC /* Sources */,
+				DD33500A2B05824900BFA3BC /* Frameworks */,
+				DD33500B2B05824900BFA3BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD3350122B05824900BFA3BC /* PBXTargetDependency */,
+			);
+			name = SciCorderTests;
+			productName = SciCorderTests;
+			productReference = DD33500D2B05824900BFA3BC /* SciCorderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DD3BBCFA2A757C3900EAA00E /* SciCorder */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD3BBD122A757C3B00EAA00E /* Build configuration list for PBXNativeTarget "SciCorder" */;
@@ -153,6 +207,10 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					DD33500C2B05824900BFA3BC = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = DD3BBCFA2A757C3900EAA00E;
+					};
 					DD3BBCFA2A757C3900EAA00E = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -175,11 +233,19 @@
 			projectRoot = "";
 			targets = (
 				DD3BBCFA2A757C3900EAA00E /* SciCorder */,
+				DD33500C2B05824900BFA3BC /* SciCorderTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DD33500B2B05824900BFA3BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD3BBCF92A757C3900EAA00E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -194,6 +260,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DD3350092B05824900BFA3BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD3350102B05824900BFA3BC /* SciCorderTests.swift in Sources */,
+				DD3350182B05934C00BFA3BC /* FitTester.swift in Sources */,
+				DD3350162B05825100BFA3BC /* MeasureTester.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD3BBCF72A757C3900EAA00E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -222,6 +298,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		DD3350122B05824900BFA3BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD3BBCFA2A757C3900EAA00E /* SciCorder */;
+			targetProxy = DD3350112B05824900BFA3BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		DD3BBD042A757C3900EAA00E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -242,6 +326,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DD3350142B05824900BFA3BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ACH6LY3WQS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pettibone.ryan.SciCorderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SciCorder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SciCorder";
+			};
+			name = Debug;
+		};
+		DD3350152B05824900BFA3BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ACH6LY3WQS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pettibone.ryan.SciCorderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SciCorder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SciCorder";
+			};
+			name = Release;
+		};
 		DD3BBD102A757C3B00EAA00E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -415,6 +535,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DD3350132B05824900BFA3BC /* Build configuration list for PBXNativeTarget "SciCorderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD3350142B05824900BFA3BC /* Debug */,
+				DD3350152B05824900BFA3BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DD3BBCF62A757C3900EAA00E /* Build configuration list for PBXProject "SciCorder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
